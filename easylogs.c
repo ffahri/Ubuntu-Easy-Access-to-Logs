@@ -4,10 +4,9 @@ void ufwlog(void);
 void authlog(void);
 void maillog(void);
 void freemem(void);
-void a(void);
 int main()
 {
-	void (*f[5])(void) = {a,ufwlog,authlog,maillog,freemem};
+	void (*f[4])(void) = {ufwlog,authlog,maillog,freemem};
 	int choose=0;
 	while(choose!=-1)
 	{
@@ -17,7 +16,7 @@ int main()
 		printf("\e[0;0mChoose and write number. For exit : -1\n");
 		scanf("%d",&choose);
 		if(choose>-1 && choose<5)
-		(*f[choose])();
+		(*f[choose-1])();
 
 	}
 }
@@ -40,4 +39,3 @@ void freemem(void)
 	system("echo 3 > /proc/sys/vm/drop_caches");
 	system("free -h");
 }
-void a(void){}
