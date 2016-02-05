@@ -36,6 +36,7 @@ void freemem(void)
 {
 	printf("Current use\n");
 	system("free -h");
+	printf("*************************************************\n");
 	system("echo 3 > /proc/sys/vm/drop_caches");
 	system("free -h");
 }
