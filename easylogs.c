@@ -4,6 +4,7 @@ void ufwlog(void);
 void authlog(void);
 void maillog(void);
 void freemem(void);
+void uptime(void);
 int main()
 {
 	void (*f[4])(void) = {ufwlog,authlog,maillog,freemem,uptime};
