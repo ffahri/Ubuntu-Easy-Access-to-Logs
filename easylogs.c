@@ -16,7 +16,7 @@ int main()
 		printf("\e[1;36m3.Show last 10 lines on mail.log (/var/log/mail.log)\n\e[1;37m4.Free memory (/proc/sys/vm/drop_caches)*YOU HAVE TO OPEN WITH SUDO*\n");
 		printf("\e[0;0mChoose and write number. For exit : -1\n");
 		scanf("%d",&choose);
-		if(choose>-1 && choose<5)
+		if(choose>-1 && choose<6)
 		(*f[choose-1])();
 
 	}
