@@ -7,7 +7,7 @@ void freemem(void);
 void uptime(void);
 int main()
 {
-	void (*f[4])(void) = {ufwlog,authlog,maillog,freemem,uptime};
+	void (*f[5])(void) = {ufwlog,authlog,maillog,freemem,uptime};
 	int choose=0;
 	while(choose!=-1)
 	{
