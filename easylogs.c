@@ -6,7 +6,7 @@ void maillog(void);
 void freemem(void);
 int main()
 {
-	void (*f[4])(void) = {ufwlog,authlog,maillog,freemem};
+	void (*f[4])(void) = {ufwlog,authlog,maillog,freemem,uptime};
 	int choose=0;
 	while(choose!=-1)
 	{
@@ -39,4 +39,8 @@ void freemem(void)
 	printf("*************************************************\n");
 	system("echo 3 > /proc/sys/vm/drop_caches");
 	system("free -h");
+}
+void uptime(void)
+{
+	system("uptime");
 }
